@@ -1,0 +1,32 @@
+# Ignore node_modules (common default)
+node_modules
+
+# Ignore build output
+dist
+build
+
+# Ignore coverage reports
+coverage
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore lock files (optional)
+package-lock.json
+yarn.lock
+
+# Ignore specific config or output files
+*.min.js
+public
+
+# Ignore compiled or bundled files
+*.bundle.js
+*.map
+
+# Ignore version control directories (rare but possible)
+.git
