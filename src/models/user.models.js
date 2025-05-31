@@ -17,8 +17,10 @@ const userSchima = new Schema(
       unique: true,
       lowercase: true,
       trim: true,
+        index: true
     },
     fullName: {  
+        type:String,
       index: true,
     },
     avatar: {
@@ -48,7 +50,7 @@ const userSchima = new Schema(
 userSchima.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
 
-  this.password = bcrypt.hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
